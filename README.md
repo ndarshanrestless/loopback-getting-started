@@ -8,3 +8,18 @@ To start the server just do "node .". It will run at 300 port on local host by d
 # To test the application
 
 Just run "mocha test"
+
+# Code coverage
+
+https://github.com/dwyl/learn-istanbul
+
+Problem with ""
+npm install --save-dev babel-cli
+node_modules/.bin/babel-node node_modules/.bin/istanbul cover --dir test/coverage test/test.js
+
+or try 
+
+node_modules/.bin/babel-node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir test/coverage test/test.js
+
+add into the package.json
+"coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha --recursive test/test.js"
