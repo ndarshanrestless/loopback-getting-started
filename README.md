@@ -11,15 +11,20 @@ Just run "mocha test"
 
 # Code coverage
 
+Problem with "No coverage information was collected, exit without writing coverage information"
+
+Just move the test to the root dir of the project and run rollowing command 
+node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir test/coverage test.js
+
+Other things to try if above still does not work 
 https://github.com/dwyl/learn-istanbul
+https://github.com/gotwarlost/istanbul/issues/798
 
-Problem with ""
 npm install --save-dev babel-cli
-node_modules/.bin/babel-node node_modules/.bin/istanbul cover --dir test/coverage test/test.js
-
-or try 
-
+node_modules/.bin/babel-node node_modules/.bin/istanbul cover --dir test/coverage test.js
 node_modules/.bin/babel-node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir test/coverage test/test.js
 
 add into the package.json
 "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha --recursive test/test.js"
+
+
