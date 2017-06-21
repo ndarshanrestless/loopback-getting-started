@@ -1,7 +1,7 @@
-var const request = require("request"),
-    const expect = require('expect'),
-    const base_url = "http://localhost:3000/",
-    const assert = require('chai').assert;
+var  request = require("request"),
+     expect = require('expect'),
+     base_url = "http://localhost:3000/",
+     assert = require('chai').assert;
 
 //const request = require('supertest');
 //assert = require('assert'),
